@@ -4,6 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/n11"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:gravity="center"
@@ -40,52 +41,73 @@
             android:layout_height="wrap_content"
             android:text="@string/clear" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/switchbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
     <TableLayout
-        android:gravity="center_vertical"
         android:id="@+id/TableLayout1"
-        android:background="@drawable/n11"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:stretchColumns="0,3"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:gravity="center_vertical"
+        android:stretchColumns="0,3">
+
         <TableRow>
+
             <TextView />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="用户名:" />
+
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="150.0dip"
-                android:hint="@string/hint" />
+                android:hint="@string/hint"
+                android:minWidth="150.0dip" />
+
             <TextView />
         </TableRow>
+
         <TableRow>
+
             <TextView />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="密  码:" />
+
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="150.0dip"
-                android:hint="@string/hint" />
+                android:hint="@string/hint"
+                android:minWidth="150.0dip" />
+
             <TextView />
         </TableRow>
+
         <TableRow>
+
             <TextView />
+
             <Button
                 android:id="@+id/movebutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="登陆" />
+
             <Button
                 android:id="@+id/quitbutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="退出" />
+
             <TextView />
         </TableRow>
     </TableLayout>

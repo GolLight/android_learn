@@ -9,17 +9,17 @@
         android:id="@+id/myBtn"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:src="@mipmap/ic_launcher_round"
         android:background="@color/bottom_bg"
-        android:scaleType="center"/>
+        android:scaleType="center"
+        android:src="@mipmap/ic_launcher_round" />
 
     <ImageView
         android:id="@+id/imgBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="358dp"
+        android:layout_height="486dp"
         android:layout_centerInParent="true"
         android:adjustViewBounds="true"
-        android:background="@mipmap/a11"
+        android:background="@drawable/a11"
         android:cropToPadding="false" />
 
     <ImageView

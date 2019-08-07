@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.Toast;
 
 //import com.example.touch.R;
@@ -27,6 +28,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private Button clearButton = null;
     private Button moveButton = null;
     private Button quitButton = null;
+    private Button switchButton = null;
     private String num;
 
     public MainActivity() {
@@ -49,7 +51,7 @@ public class MainActivity extends Activity implements OnClickListener {
         readButton = findViewById(R.id.button_read);
         writeButton = findViewById(R.id.button_write);
         clearButton = findViewById(R.id.button_clear);
-
+        switchButton = findViewById(R.id.switchbutton);
         moveButton = findViewById(R.id.movebutton);
         quitButton = findViewById(R.id.quitbutton);
 
@@ -58,7 +60,7 @@ public class MainActivity extends Activity implements OnClickListener {
         clearButton.setOnClickListener(this);
         moveButton.setOnClickListener(this);
         quitButton.setOnClickListener(this);
-
+        switchButton.setOnClickListener(this);
         Log.i(LOG_TAG, "Touch Activity Created");
     }
 
@@ -126,6 +128,23 @@ public class MainActivity extends Activity implements OnClickListener {
         }
         else if(v.equals(quitButton)) {
             final Intent it = new Intent(MainActivity.this,grid.class);
+            Thread thread = new Thread() {
+                @Override
+                public void run() {
+                    try {
+                        sleep(10);
+
+                        startActivity(it);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            Toast.makeText(this, "正在切换", Toast.LENGTH_LONG).show();
+            thread.start();
+        }
+        else if(v.equals(switchButton)) {
+            final Intent it = new Intent(MainActivity.this,SwitchToggleButton.class);
             Thread thread = new Thread() {
                 @Override
                 public void run() {
