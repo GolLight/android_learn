@@ -31,6 +31,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private Button switchButton = null;
     private String num;
 
+
     public MainActivity() {
         num = new String("Please input a value...");
     }
